@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ShowSense — WQD7004 Poster | S2104232</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --ink:#0d0d1a;
+    --ink2:#1a1a2e;
+    --ink3:#12121f;
+    --gold:#e8a020;
+    --gold2:#f5c842;
+    --cream:#fdf8f0;
+    --muted:#7a7a8a;
+    --border:#2e2e4a;
+    --green:#1d9e75;
+    --red:#c0392b;
+    --purple:#534ab7;
+    --purple2:#7f77dd;
+    --text-light:rgba(255,255,255,0.85);
+    --text-dim:rgba(255,255,255,0.45);
+  }
+  body{
+    font-family:'DM Sans',sans-serif;
+    background:#e8e4dc;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px;
+  }
+  .poster{
+    width:794px;
+    background:var(--ink);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* ── HEADER ── */
+  .header{
+    background:var(--ink2);
+    padding:32px 36px 26px;
+    border-bottom:3px solid var(--gold);
+    position:relative;
+    overflow:hidden;
+  }
+  .header::before{
+    content:'';position:absolute;top:-80px;right:-60px;
+    width:260px;height:260px;border-radius:50%;
+    background:var(--purple);opacity:0.12;
+  }
+  .header::after{
+    content:'';position:absolute;bottom:-60px;left:60px;
+    width:180px;height:180px;border-radius:50%;
+    background:var(--gold);opacity:0.07;
+  }
+  .header-eyebrow{
+    font-size:9px;font-weight:500;letter-spacing:3px;
+    text-transform:uppercase;color:var(--gold);margin-bottom:10px;
+  }
+  .header-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;}
+  .header-left{flex:1;}
+  .header-title{
+    font-family:'Playfair Display',serif;
+    font-size:42px;font-weight:900;line-height:1.05;
+    color:#fff;margin-bottom:6px;
+  }
+  .header-title em{color:var(--gold);font-style:italic;}
+  .header-subtitle{
+    font-size:13px;color:var(--text-dim);font-weight:300;
+    max-width:460px;line-height:1.6;margin-top:10px;
+  }
+  .header-badge{
+    background:var(--purple);
+    border-radius:8px;padding:14px 18px;
+    text-align:center;min-width:140px;flex-shrink:0;
+    border:1px solid var(--purple2);
+  }
+  .badge-app-label{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px;}
+  .badge-app-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);font-style:italic;}
+  .badge-app-link{font-size:9px;color:rgba(255,255,255,0.4);margin-top:4px;word-break:break-all;}
+  .header-meta{
+    display:flex;gap:0;margin-top:20px;
+    border-top:0.5px solid var(--border);padding-top:16px;
+  }
+  .meta-item{flex:1;padding-right:20px;border-right:0.5px solid var(--border);}
+  .meta-item:last-child{border-right:none;padding-left:20px;padding-right:0;}
+  .meta-item:first-child{padding-left:0;}
+  .meta-item:not(:first-child){padding-left:20px;}
+  .meta-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:4px;}
+  .meta-value{font-size:13px;font-weight:500;color:#fff;}
+
+  /* ── BODY ── */
+  .body{padding:0 28px 28px;}
+
+  /* ── SECTION LABEL ── */
+  .sec-label{
+    font-size:8px;font-weight:500;letter-spacing:2.5px;
+    text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:10px;
+    margin:22px 0 12px;
+  }
+  .sec-label::before{content:'';width:18px;height:1.5px;background:var(--gold);flex-shrink:0;}
+  .sec-label::after{content:'';flex:1;height:0.5px;background:var(--border);}
+
+  /* ── PROBLEM SECTION ── */
+  .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .problem-card{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;border-top:2px solid var(--red);
+  }
+  .problem-heading{
+    font-family:'Playfair Display',serif;font-size:15px;
+    font-weight:700;color:var(--gold);margin-bottom:8px;
+  }
+  .problem-text{font-size:11px;line-height:1.7;color:var(--text-light);}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+  .stat-box{background:rgba(255,255,255,0.04);border:0.5px solid var(--border);border-radius:7px;padding:10px;}
+  .stat-num{font-size:20px;font-weight:700;color:var(--gold2);font-family:'Playfair Display',serif;}
+  .stat-desc{font-size:9px;color:var(--text-dim);margin-top:3px;line-height:1.4;}
+
+  .how-card{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;border-top:2px solid var(--purple);
+  }
+  .how-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold);margin-bottom:10px;}
+  .how-text{font-size:11px;line-height:1.7;color:var(--text-light);margin-bottom:10px;}
+  .research-q{
+    background:rgba(83,74,183,0.15);border-left:3px solid var(--purple);
+    border-radius:0 6px 6px 0;padding:10px 12px;
+    font-size:10.5px;line-height:1.6;color:rgba(255,255,255,0.8);
+    font-style:italic;
+  }
+
+  /* ── DATASETS ── */
+  .dataset-list{display:flex;flex-direction:column;gap:8px;}
+  .dataset-item{
+    display:flex;align-items:center;gap:12px;
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:8px;padding:10px 14px;
+    text-decoration:none;color:inherit;
+    transition:border-color 0.2s;cursor:pointer;
+  }
+  .dataset-item:hover{border-color:var(--gold);}
+  .ds-icon{
+    width:32px;height:32px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;font-weight:700;
+    font-family:'DM Mono',monospace;
+  }
+  .ds-1{background:rgba(29,158,117,0.2);color:var(--green);}
+  .ds-2{background:rgba(83,74,183,0.2);color:var(--purple2);}
+  .ds-3{background:rgba(232,160,32,0.2);color:var(--gold);}
+  .ds-name{font-size:11px;font-weight:500;color:#fff;flex:1;}
+  .ds-sub{font-size:9px;color:var(--text-dim);margin-top:2px;}
+  .ds-arrow{font-size:12px;color:var(--text-dim);}
+  .ds-cols{font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;}
+
+  /* ── THREE COLUMN LAYOUT ── */
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+  /* ── PIPELINE STEPS ── */
+  .pipeline-card{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;
+  }
+  .pipeline-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+  .step-row{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
+  .step-num{
+    width:20px;height:20px;border-radius:50%;
+    background:var(--purple);color:#fff;
+    font-size:9px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;margin-top:1px;
+  }
+  .step-content{flex:1;}
+  .step-title{font-size:10.5px;font-weight:500;color:#fff;}
+  .step-pkg{
+    font-size:9px;background:rgba(83,74,183,0.2);
+    color:var(--purple2);border-radius:4px;
+    padding:1px 6px;display:inline-block;margin-top:2px;
+    font-family:'DM Mono',monospace;
+  }
+  .step-line{width:1px;height:6px;background:var(--border);margin-left:9px;}
+
+  /* ── R PACKAGES ── */
+  .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+  .pkg-card{
+    background:var(--ink3);border:0.5px solid var(--border);
+    border-radius:6px;padding:8px 10px;
+  }
+  .pkg-name{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--purple2);}
+  .pkg-use{font-size:9px;color:var(--muted);margin-top:2px;}
+
+  /* ── MODEL RESULTS ── */
+  .model-card{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;border-top:2px solid var(--green);
+  }
+  .model-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+  .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
+  .metric-box{
+    background:var(--ink3);border-radius:8px;
+    padding:10px;text-align:center;
+  }
+  .metric-num{font-size:18px;font-weight:700;color:var(--gold2);font-family:'Playfair Display',serif;}
+  .metric-lbl{font-size:8px;color:var(--text-dim);margin-top:3px;line-height:1.3;}
+  .feat-label{font-size:9px;color:var(--muted);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase;}
+  .feat-row{margin-bottom:6px;}
+  .feat-name-row{display:flex;justify-content:space-between;margin-bottom:3px;}
+  .feat-name{font-size:10px;color:var(--text-light);}
+  .feat-val{font-size:10px;color:var(--gold);font-family:'DM Mono',monospace;}
+  .feat-bar-bg{height:6px;background:rgba(255,255,255,0.06);border-radius:3px;}
+  .feat-bar-fill{height:6px;border-radius:3px;}
+  .f1{background:var(--gold);width:100%;}
+  .f2{background:var(--green);width:71%;}
+  .f3{background:var(--purple2);width:53%;}
+  .f4{background:var(--muted);width:32%;}
+
+  /* ── MOCKUP ── */
+  .mockup-wrapper{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;border-top:2px solid var(--gold);
+  }
+  .mockup-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+  .mockup-link{text-decoration:none;display:block;cursor:pointer;}
+  .mockup-shell{
+    background:#08081a;border-radius:10px;overflow:hidden;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:border-color 0.2s;
+  }
+  .mockup-link:hover .mockup-shell{border-color:var(--gold);}
+  .mockup-bar{
+    background:#10101f;display:flex;align-items:center;
+    gap:6px;padding:8px 12px;border-bottom:0.5px solid rgba(255,255,255,0.08);
+  }
+  .m-dot{width:7px;height:7px;border-radius:50%;}
+  .m-url{
+    flex:1;background:rgba(255,255,255,0.05);border-radius:4px;
+    padding:3px 8px;font-size:9px;color:rgba(255,255,255,0.3);
+    font-family:'DM Mono',monospace;margin-left:6px;
+  }
+  .m-open{font-size:8px;color:var(--gold);margin-left:6px;letter-spacing:0.5px;}
+  .mockup-body{display:grid;grid-template-columns:160px 1fr;min-height:200px;}
+  .mockup-sidebar{
+    background:#0d0d1e;padding:14px 10px;
+    border-right:0.5px solid rgba(255,255,255,0.06);
+  }
+  .mockup-brand{font-size:13px;font-weight:700;color:var(--gold);font-style:italic;font-family:'Playfair Display',serif;margin-bottom:14px;padding-bottom:10px;border-bottom:0.5px solid rgba(255,255,255,0.08);}
+  .mockup-nav{font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:6px;padding:5px 8px;border-radius:4px;}
+  .mockup-nav.active{background:rgba(83,74,183,0.25);color:var(--purple2);border-left:2px solid var(--purple);}
+  .mockup-main{padding:14px;}
+  .mockup-section-title{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+  .mockup-sliders{margin-bottom:12px;}
+  .slider-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+  .slider-label{font-size:8px;color:rgba(255,255,255,0.4);width:90px;flex-shrink:0;}
+  .slider-track{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;position:relative;}
+  .slider-fill{height:3px;border-radius:2px;background:var(--purple);}
+  .slider-val{font-size:8px;color:var(--gold);width:28px;text-align:right;font-family:'DM Mono',monospace;}
+  .mockup-btn{
+    background:var(--purple);border-radius:5px;padding:6px 10px;
+    font-size:8px;color:#fff;text-align:center;margin-bottom:12px;
+    font-weight:500;
+  }
+  .result-badge{
+    border-radius:6px;padding:8px;text-align:center;
+    font-size:11px;font-weight:700;margin-bottom:8px;
+  }
+  .badge-r{background:rgba(29,158,117,0.2);color:#4ade80;border:0.5px solid #1d9e75;}
+  .prob-track{height:5px;background:rgba(255,255,255,0.08);border-radius:3px;margin-bottom:4px;}
+  .prob-fill-g{height:5px;border-radius:3px;background:var(--green);width:78%;}
+  .prob-text{font-size:8px;color:rgba(255,255,255,0.5);}
+  .mockup-caption{font-size:9px;color:var(--muted);text-align:center;margin-top:6px;}
+  .click-hint{font-size:9px;color:var(--gold);text-align:center;margin-top:4px;opacity:0.7;}
+
+  /* ── INSIGHTS ── */
+  .insights-card{
+    background:var(--ink2);border:0.5px solid var(--border);
+    border-radius:10px;padding:18px;
+  }
+  .insights-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+  .insight-item{
+    display:flex;gap:10px;align-items:flex-start;
+    margin-bottom:10px;font-size:10.5px;line-height:1.6;color:var(--text-light);
+  }
+  .insight-icon{
+    width:22px;height:22px;border-radius:5px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;flex-shrink:0;margin-top:1px;
+  }
+  .i-green{background:rgba(29,158,117,0.2);color:var(--green);}
+  .i-gold{background:rgba(232,160,32,0.15);color:var(--gold);}
+  .i-purple{background:rgba(83,74,183,0.2);color:var(--purple2);}
+  .i-red{background:rgba(192,57,43,0.2);color:#f87171;}
+
+  /* ── FOOTER ── */
+  .footer{
+    background:var(--ink2);border-top:2px solid var(--gold);
+    padding:16px 28px;display:flex;
+    justify-content:space-between;align-items:center;
+  }
+  .footer-left{font-size:9px;color:var(--text-dim);line-height:1.8;}
+  .footer-right{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);font-style:italic;opacity:0.6;}
+
+  @media print{
+    body{background:none;padding:0;}
+    .poster{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-eyebrow">WQD7004 · Programming for Data Science · Poster Assessment · Semester II 2025/2026</div>
+    <div class="header-grid">
+      <div class="header-left">
+        <div class="header-title">Data Science in the<br><em>Entertainment Sector</em></div>
+        <div class="header-subtitle">Predicting TV series renewal or cancellation using Random Forest classification trained on real Netflix and IMDb datasets — powered by R and deployed as a live Shiny application.</div>
+      </div>
+      <a href="https://mdraffaul-7055.shinyapps.io/ShowSense/" target="_blank" style="text-decoration:none;">
+        <div class="header-badge">
+          <div class="badge-app-label">Live App</div>
+          <div class="badge-app-name">ShowSense</div>
+          <div class="badge-app-link">mdraffaul-7055.shinyapps.io/ShowSense</div>
+        </div>
+      </a>
+    </div>
+    <div class="header-meta">
+      <div class="meta-item"><div class="meta-label">Student</div><div class="meta-value">MD Raffaul Islam</div></div>
+      <div class="meta-item"><div class="meta-label">Matric No.</div><div class="meta-value">S2104232</div></div>
+      <div class="meta-item"><div class="meta-label">Course</div><div class="meta-value">WQD7004</div></div>
+      <div class="meta-item"><div class="meta-label">Topic Code</div><div class="meta-value">Ends in 2 → Entertainment</div></div>
+      <div class="meta-item"><div class="meta-label">Submission</div><div class="meta-value">7 June 2026</div></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- PROBLEM -->
+    <div class="sec-label">The Problem</div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-heading">TV Series Renewal & Cancellation</div>
+        <div class="problem-text">
+          Streaming platforms invest millions producing TV series, yet renewal and cancellation decisions are made by executives using internal viewership data never shared publicly. Showrunners invest years writing multi-season story arcs only to face abrupt cancellations. Audiences invest emotionally in series without knowing if the story will ever conclude. There is no systematic, data-driven early warning system available to creators, investors, or audiences.
+        </div>
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-num">60%</div>
+            <div class="stat-desc">of new Netflix shows cancelled after just one season</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">$M+</div>
+            <div class="stat-desc">wasted per cancelled series in production costs</div>
+          </div>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-title">How Data Science Solves This</div>
+        <div class="how-text">By training a machine learning classification model on publicly available IMDb scores, vote counts, episode runtime, and release year data, we can predict whether a show will be renewed or cancelled — before the official decision is announced.</div>
+        <div class="research-q">
+          "Can we build a predictive model using only publicly available data — IMDb ratings, vote counts, review sentiment, genre, episode count — that accurately classifies whether a TV series will be renewed or cancelled before the decision is officially announced?"
+        </div>
+      </div>
+    </div>
+
+    <!-- DATASETS -->
+    <div class="sec-label">Datasets Used</div>
+    <div class="dataset-list">
+      <a class="dataset-item" href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">
+        <div class="ds-icon ds-1">D1</div>
+        <div style="flex:1;">
+          <div class="ds-name">Netflix Movies and TV Shows — shivamb</div>
+          <div class="ds-sub">8,807 titles · 12 columns · type, title, duration, listed_in, release_year · Used to extract number of seasons per show</div>
+        </div>
+        <div class="ds-cols">kaggle.com</div>
+        <div class="ds-arrow">↗</div>
+      </a>
+      <a class="dataset-item" href="https://www.kaggle.com/datasets/thedevastator/netflix-imdb-scores" target="_blank">
+        <div class="ds-icon ds-2">D2</div>
+        <div style="flex:1;">
+          <div class="ds-name">Netflix TV Shows and Movies — IMDb Scores</div>
+          <div class="ds-sub">5,283 titles · 11 columns · imdb_score, imdb_votes, runtime, type, release_year · Primary feature dataset for model training</div>
+        </div>
+        <div class="ds-cols">kaggle.com</div>
+        <div class="ds-arrow">↗</div>
+      </a>
+      <a class="dataset-item" href="https://www.kaggle.com/datasets/parthdande/imdb-dataset-2024-updated?resource=download" target="_blank">
+        <div class="ds-icon ds-3">D3</div>
+        <div style="flex:1;">
+          <div class="ds-name">IMDb Dataset 2024 Updated — parthdande</div>
+          <div class="ds-sub">3,173 titles · 10 columns · IMDb Rating, Genre, MetaScore, Duration · Supplementary reference and genre validation</div>
+        </div>
+        <div class="ds-cols">kaggle.com</div>
+        <div class="ds-arrow">↗</div>
+      </a>
+    </div>
+
+    <!-- PIPELINE + PACKAGES -->
+    <div class="sec-label">Solution Pipeline & R Packages</div>
+    <div class="two-col">
+      <div class="pipeline-card">
+        <div class="pipeline-title">Step-by-step pipeline in R</div>
+        <div class="step-row"><div class="step-num">1</div><div class="step-content"><div class="step-title">Data ingestion from 3 Kaggle datasets</div><span class="step-pkg">readr · tidyverse</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">2</div><div class="step-content"><div class="step-title">Clean column names & filter TV shows only</div><span class="step-pkg">janitor · dplyr · stringr</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">3</div><div class="step-content"><div class="step-title">Extract seasons count from duration field</div><span class="step-pkg">stringr · mutate()</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">4</div><div class="step-content"><div class="step-title">Join datasets by title & create outcome variable</div><span class="step-pkg">dplyr · inner_join()</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">5</div><div class="step-content"><div class="step-title">Exploratory data analysis & visualisation</div><span class="step-pkg">ggplot2 · skimr</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">6</div><div class="step-content"><div class="step-title">80/20 train-test split with stratification</div><span class="step-pkg">caret · createDataPartition()</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">7</div><div class="step-content"><div class="step-title">Train Random Forest classifier (100 trees)</div><span class="step-pkg">randomForest · ntree=100</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">8</div><div class="step-content"><div class="step-title">Evaluate with confusion matrix & accuracy</div><span class="step-pkg">caret · confusionMatrix()</span></div></div>
+        <div class="step-line"></div>
+        <div class="step-row"><div class="step-num">9</div><div class="step-content"><div class="step-title">Deploy interactive Shiny dashboard</div><span class="step-pkg">shiny · shinydashboard · plotly · DT</span></div></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="pipeline-card" style="flex:1;">
+          <div class="pipeline-title">Key R packages</div>
+          <div class="pkg-grid">
+            <div class="pkg-card"><div class="pkg-name">tidyverse</div><div class="pkg-use">Data wrangling & EDA</div></div>
+            <div class="pkg-card"><div class="pkg-name">janitor</div><div class="pkg-use">Column name cleaning</div></div>
+            <div class="pkg-card"><div class="pkg-name">randomForest</div><div class="pkg-use">RF classification model</div></div>
+            <div class="pkg-card"><div class="pkg-name">caret</div><div class="pkg-use">Train/test & evaluation</div></div>
+            <div class="pkg-card"><div class="pkg-name">ggplot2</div><div class="pkg-use">Data visualisation</div></div>
+            <div class="pkg-card"><div class="pkg-name">stringr</div><div class="pkg-use">Season extraction regex</div></div>
+            <div class="pkg-card"><div class="pkg-name">shiny</div><div class="pkg-use">Interactive dashboard</div></div>
+            <div class="pkg-card"><div class="pkg-name">plotly</div><div class="pkg-use">Interactive charts</div></div>
+          </div>
+        </div>
+
+        <!-- MODEL RESULTS -->
+        <div class="model-card">
+          <div class="model-title">Model results — Random Forest</div>
+          <div class="metrics-grid">
+            <div class="metric-box"><div class="metric-num">70.6%</div><div class="metric-lbl">Overall accuracy</div></div>
+            <div class="metric-box"><div class="metric-num">1,414</div><div class="metric-lbl">Shows in dataset</div></div>
+            <div class="metric-box"><div class="metric-num">1,132</div><div class="metric-lbl">Training rows</div></div>
+            <div class="metric-box"><div class="metric-num">282</div><div class="metric-lbl">Test rows</div></div>
+          </div>
+          <div class="feat-label">Feature importance (MeanDecreaseGini)</div>
+          <div class="feat-row">
+            <div class="feat-name-row"><span class="feat-name">IMDb Votes</span><span class="feat-val">208.9</span></div>
+            <div class="feat-bar-bg"><div class="feat-bar-fill f1"></div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-name-row"><span class="feat-name">Episode Runtime</span><span class="feat-val">149.1</span></div>
+            <div class="feat-bar-bg"><div class="feat-bar-fill f2"></div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-name-row"><span class="feat-name">IMDb Score</span><span class="feat-val">110.8</span></div>
+            <div class="feat-bar-bg"><div class="feat-bar-fill f3"></div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-name-row"><span class="feat-name">Release Year</span><span class="feat-val">65.9</span></div>
+            <div class="feat-bar-bg"><div class="feat-bar-fill f4"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="sec-label">Solution Mockup — ShowSense Shiny App</div>
+    <div class="mockup-wrapper">
+      <div class="mockup-title">Live interactive dashboard — click to open</div>
+      <a class="mockup-link" href="https://mdraffaul-7055.shinyapps.io/ShowSense/" target="_blank">
+        <div class="mockup-shell">
+          <div class="mockup-bar">
+            <div class="m-dot" style="background:#ff5f57;"></div>
+            <div class="m-dot" style="background:#febc2e;"></div>
+            <div class="m-dot" style="background:#28c840;"></div>
+            <div class="m-url">https://mdraffaul-7055.shinyapps.io/ShowSense/</div>
+            <div class="m-open">↗ Open App</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-sidebar">
+              <div class="mockup-brand">ShowSense</div>
+              <div class="mockup-nav active">&#9654; Renewal Predictor</div>
+              <div class="mockup-nav">&#9776; Shows Comparison</div>
+              <div style="margin-top:20px;font-size:8px;color:rgba(255,255,255,0.2);line-height:1.6;">
+                WQD7004<br>MD Raffaul Islam<br>S2104232
+              </div>
+            </div>
+            <div class="mockup-main">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div>
+                  <div class="mockup-section-title">Enter show details</div>
+                  <div class="mockup-sliders">
+                    <div class="slider-row">
+                      <div class="slider-label">IMDb Score (1-10)</div>
+                      <div class="slider-track"><div class="slider-fill" style="width:75%;"></div></div>
+                      <div class="slider-val">7.5</div>
+                    </div>
+                    <div class="slider-row">
+                      <div class="slider-label">IMDb Votes</div>
+                      <div class="slider-track"><div class="slider-fill" style="width:40%;"></div></div>
+                      <div class="slider-val">50K</div>
+                    </div>
+                    <div class="slider-row">
+                      <div class="slider-label">Runtime (mins)</div>
+                      <div class="slider-track"><div class="slider-fill" style="width:35%;"></div></div>
+                      <div class="slider-val">45</div>
+                    </div>
+                    <div class="slider-row">
+                      <div class="slider-label">Release Year</div>
+                      <div class="slider-track"><div class="slider-fill" style="width:90%;"></div></div>
+                      <div class="slider-val">2021</div>
+                    </div>
+                  </div>
+                  <div class="mockup-btn">&#9654; Run Prediction</div>
+                </div>
+                <div>
+                  <div class="mockup-section-title">Prediction result</div>
+                  <div class="result-badge badge-r">✔ Likely Renewed</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.35);margin-bottom:4px;">Renewal probability</div>
+                  <div class="prob-track"><div class="prob-fill-g"></div></div>
+                  <div class="prob-text">78% renewal probability</div>
+                  <div style="margin-top:8px;font-size:8px;color:#4ade80;">Low risk — strong indicators of renewal</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;">
+                    <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;">
+                      <div style="font-size:13px;font-weight:700;color:var(--gold);">7.5</div>
+                      <div style="font-size:7px;color:rgba(255,255,255,0.3);">IMDb Score</div>
+                    </div>
+                    <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;">
+                      <div style="font-size:13px;font-weight:700;color:var(--gold);">50,000</div>
+                      <div style="font-size:7px;color:rgba(255,255,255,0.3);">IMDb Votes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="border-top:0.5px solid rgba(255,255,255,0.06);margin-top:12px;padding-top:10px;">
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+                  <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;"><div style="font-size:11px;font-weight:700;color:var(--gold);">70.6%</div><div style="font-size:7px;color:rgba(255,255,255,0.3);">Accuracy</div></div>
+                  <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;"><div style="font-size:11px;font-weight:700;color:var(--gold);">1,414</div><div style="font-size:7px;color:rgba(255,255,255,0.3);">Shows</div></div>
+                  <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;"><div style="font-size:11px;font-weight:700;color:var(--gold);">100</div><div style="font-size:7px;color:rgba(255,255,255,0.3);">Trees</div></div>
+                  <div style="background:#08081a;border-radius:5px;padding:6px;text-align:center;"><div style="font-size:11px;font-weight:700;color:var(--gold);">80/20</div><div style="font-size:7px;color:rgba(255,255,255,0.3);">Split</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-caption">Fig 1. ShowSense — Live Shiny app for TV series renewal prediction</div>
+        <div class="click-hint">↗ Click anywhere on the mockup to open the live app</div>
+      </a>
+    </div>
+
+    <!-- INSIGHTS -->
+    <div class="sec-label">Additional Insights & Ethical Considerations</div>
+    <div class="two-col">
+      <div class="insights-card">
+        <div class="insights-title">Why this matters</div>
+        <div class="insight-item">
+          <div class="insight-icon i-green">📈</div>
+          <div>Studios can use early-warning predictions to course-correct struggling shows before the cancellation decision, potentially saving millions in sunk production costs.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-gold">🎬</div>
+          <div>Independent creators can benchmark their pitch against historical patterns — understanding what IMDb engagement thresholds correlate with multi-season renewals.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-purple">🌍</div>
+          <div>Investors and studios in emerging markets like Southeast Asia can use the model to evaluate content acquisition decisions based on predicted longevity.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-red">⚠️</div>
+          <div>Ethical note: The model's 70.6% accuracy means it is wrong ~30% of the time. It should be used as a supplementary signal, not a definitive decision tool.</div>
+        </div>
+      </div>
+      <div class="insights-card">
+        <div class="insights-title">Key findings from the data</div>
+        <div class="insight-item">
+          <div class="insight-icon i-gold">★</div>
+          <div>IMDb vote count (audience engagement volume) is the strongest predictor of renewal — more important than the actual rating score itself.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-green">⏱</div>
+          <div>Episode runtime is the second strongest feature — shows with runtime between 40–60 minutes showed significantly higher renewal rates in the dataset.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-purple">📊</div>
+          <div>Of 1,414 TV shows in the merged dataset, 868 were cancelled (61.4%) and 546 were renewed (38.6%), reflecting the harsh reality of the streaming landscape.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon i-red">🔍</div>
+          <div>Breaking Bad (9.5 IMDb, 5 seasons) and Kota Factory (9.3 IMDb, 2 seasons) appear as top renewed shows — validating the model's feature assumptions.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      WQD7004 Programming for Data Science · Faculty of Computer Science &amp; Information Technology · Universiti Malaya<br>
+      Academic Session 2025/2026 Semester II · MD Raffaul Islam · S2104232 · Submission: 7 June 2026
+    </div>
+    <div class="footer-right">ShowSense</div>
+  </div>
+
+</div>
+</body>
+</html>
